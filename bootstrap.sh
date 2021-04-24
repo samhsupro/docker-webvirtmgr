@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ ! -f "/data/vm/webvirtmgr.sqlite3" ]; then
+if [ ! -f "/webvirtmgr/sqldata/webvirtmgr.sqlite3" ]; then
 
 chown webvirtmgr /var/run/libvirt/libvirt-sock
 /usr/bin/python /webvirtmgr/manage.py syncdb --noinput
