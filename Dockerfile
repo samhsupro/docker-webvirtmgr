@@ -22,7 +22,6 @@ RUN chown webvirtmgr:libvirtd -R /webvirtmgr
 RUN apt-get -ys clean
 
 WORKDIR /
-VOLUME /webvirtmgr/sqldata/
 
 EXPOSE 8080
 EXPOSE 6080
