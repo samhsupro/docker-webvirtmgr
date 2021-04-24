@@ -16,8 +16,8 @@ ADD gunicorn.conf.py /webvirtmgr/conf/gunicorn.conf.py
 
 ADD bootstrap.sh /webvirtmgr/bootstrap.sh
 
-RUN useradd webvirtmgr -g libvirtd -u 1010 -d /webvirtmgr/sqldata/ -s /sbin/nologin
-RUN chown webvirtmgr:libvirtd -R /webvirtmgr
+RUN useradd webvirtmgr  -d /webvirtmgr/sqldata/ -s /sbin/nologin
+RUN chown -R webvirtmgr /webvirtmgr
 
 RUN apt-get -ys clean
 
